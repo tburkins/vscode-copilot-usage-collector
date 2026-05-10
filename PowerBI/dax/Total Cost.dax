@@ -1,0 +1,2 @@
+Total Cost ($) =
+[Input Cost ($)] + [Cache Read Cost ($)] + [Cache Write Cost ($)] + [Output Cost ($)]

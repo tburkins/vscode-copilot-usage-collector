@@ -1,0 +1,6 @@
+Output Cost ($) =
+SUMX(
+    OtelTraces,
+    DIVIDE(OtelTraces[outputTokens], 1000000) *
+    RELATED(ModelPricing[OutputPricePerM])
+)

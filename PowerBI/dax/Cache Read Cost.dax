@@ -1,0 +1,6 @@
+Cache Read Cost ($) =
+SUMX(
+    OtelTraces,
+    DIVIDE(OtelTraces[cacheReadTokens], 1000000) *
+    RELATED(ModelPricing[CacheReadPricePerM])
+)

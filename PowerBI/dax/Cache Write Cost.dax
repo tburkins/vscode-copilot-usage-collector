@@ -1,0 +1,6 @@
+Cache Write Cost ($) =
+SUMX(
+    OtelTraces,
+    DIVIDE(OtelTraces[cacheCreationTokens], 1000000) *
+    COALESCE(RELATED(ModelPricing[CacheWritePricePerM]), 0)
+)

@@ -1,0 +1,6 @@
+Input Cost ($) =
+SUMX(
+    OtelTraces,
+    DIVIDE(OtelTraces[inputTokens], 1000000) *
+    RELATED(ModelPricing[InputPricePerM])
+)
