@@ -1,6 +1,6 @@
 # GitHub Copilot Usage Analytics
 
-Visualise GitHub Copilot AI token usage and estimated cost in Power BI by collecting OpenTelemetry traces from VS Code and loading them into a pre-built data model.
+Visualize GitHub Copilot AI token usage and estimated cost in Power BI by collecting OpenTelemetry traces from VS Code and loading them into a pre-built data model.
 
 ---
 
