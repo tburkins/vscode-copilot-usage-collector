@@ -71,7 +71,8 @@ Use Copilot as normal. Trace data will accumulate in `data/traces.json`.
 1. Open `Copilot Usage.pbix` in Power BI Desktop.
 2. Go to **Home → Transform Data → Manage Parameters**.
 3. Set the **`DataFolder`** parameter to the absolute path of the `data/` folder on your machine, e.g. `C:\Users\you\otel\data`.
-4. Click **Home → Refresh** to load your traces.
+4. Set the **`TimeZoneOffsetHours`** parameter to your UTC offset so that timestamps display in local time (e.g. `-5` for UTC−5 Eastern Standard, `-7` for UTC−7 Mountain Standard, `1` for CET). Fractional offsets are supported (e.g. `5.5` for India UTC+5:30). This is a fixed offset and does **not** auto-adjust for daylight saving time.
+5. Click **Home → Refresh** to load your traces.
 
 ---
 
@@ -210,6 +211,9 @@ Edit the `Rows` list in [PowerBI/queries/ModelPricing.pq](PowerBI/queries/ModelP
 
 ### Changing the data folder
 Go to **Home → Transform Data → Manage Parameters** and update the `DataFolder` value. No query edits needed.
+
+### Changing the time zone
+Go to **Home → Transform Data → Manage Parameters** and update the `TimeZoneOffsetHours` value. Use your UTC offset as a decimal number (e.g. `-5`, `1`, `5.5`). The offset is applied as a fixed shift to all `startTime` and `endTime` values and does not account for daylight saving time.
 
 ### Adding new span attributes
 In `OtelTraces.pq`, add a field to the record returned inside `WithSpanFields`, then add the column name to both the `ExpandedSpanRecord` column list and the `FinalTable` column list.

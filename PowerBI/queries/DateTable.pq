@@ -4,10 +4,12 @@
 
 let
     // -------------------------------------------------------------------------
-    // Derive date range from OtelTraces so the table always covers the data
+    // Derive date range from OtelTraces so the table always covers the data.
+    // Falls back to today when the table is empty (List.Min/Max return null).
     // -------------------------------------------------------------------------
-    MinDate = List.Min(OtelTraces[StartDate]),
-    MaxDate = List.Max(OtelTraces[StartDate]),
+    Today   = Date.From(DateTime.LocalNow()),
+    MinDate = List.Min(OtelTraces[StartDate]) ?? Today,
+    MaxDate = List.Max(OtelTraces[StartDate]) ?? Today,
 
     // -------------------------------------------------------------------------
     // Generate a list of every date in the range, then convert to a table

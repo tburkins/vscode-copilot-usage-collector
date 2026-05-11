@@ -29,12 +29,18 @@ let
         // ── Anthropic ─────────────────────────────────────────────────────────
         // Anthropic has an additional CacheWritePricePerM column
         [ ModelId = "claude-haiku-4-5",  ModelDisplayName = "Claude Haiku 4.5", Provider = "Anthropic", Tier = "Versatile", InputPricePerM = 1.00, CacheReadPricePerM = 0.10, CacheWritePricePerM = 1.25, OutputPricePerM = 5.00  ],
+        [ ModelId = "claude-haiku-4.5",  ModelDisplayName = "Claude Haiku 4.5", Provider = "Anthropic", Tier = "Versatile", InputPricePerM = 1.00, CacheReadPricePerM = 0.10, CacheWritePricePerM = 1.25, OutputPricePerM = 5.00  ],
         [ ModelId = "claude-sonnet-4",   ModelDisplayName = "Claude Sonnet 4",  Provider = "Anthropic", Tier = "Versatile", InputPricePerM = 3.00, CacheReadPricePerM = 0.30, CacheWritePricePerM = 3.75, OutputPricePerM = 15.00 ],
         [ ModelId = "claude-sonnet-4-5", ModelDisplayName = "Claude Sonnet 4.5",Provider = "Anthropic", Tier = "Versatile", InputPricePerM = 3.00, CacheReadPricePerM = 0.30, CacheWritePricePerM = 3.75, OutputPricePerM = 15.00 ],
+        [ ModelId = "claude-sonnet-4.5", ModelDisplayName = "Claude Sonnet 4.5",Provider = "Anthropic", Tier = "Versatile", InputPricePerM = 3.00, CacheReadPricePerM = 0.30, CacheWritePricePerM = 3.75, OutputPricePerM = 15.00 ],
         [ ModelId = "claude-sonnet-4-6", ModelDisplayName = "Claude Sonnet 4.6",Provider = "Anthropic", Tier = "Versatile", InputPricePerM = 3.00, CacheReadPricePerM = 0.30, CacheWritePricePerM = 3.75, OutputPricePerM = 15.00 ],
+        [ ModelId = "claude-sonnet-4.6", ModelDisplayName = "Claude Sonnet 4.6",Provider = "Anthropic", Tier = "Versatile", InputPricePerM = 3.00, CacheReadPricePerM = 0.30, CacheWritePricePerM = 3.75, OutputPricePerM = 15.00 ],
         [ ModelId = "claude-opus-4-5",   ModelDisplayName = "Claude Opus 4.5",  Provider = "Anthropic", Tier = "Powerful",  InputPricePerM = 5.00, CacheReadPricePerM = 0.50, CacheWritePricePerM = 6.25, OutputPricePerM = 25.00 ],
+        [ ModelId = "claude-opus-4.5",   ModelDisplayName = "Claude Opus 4.5",  Provider = "Anthropic", Tier = "Powerful",  InputPricePerM = 5.00, CacheReadPricePerM = 0.50, CacheWritePricePerM = 6.25, OutputPricePerM = 25.00 ],
         [ ModelId = "claude-opus-4-6",   ModelDisplayName = "Claude Opus 4.6",  Provider = "Anthropic", Tier = "Powerful",  InputPricePerM = 5.00, CacheReadPricePerM = 0.50, CacheWritePricePerM = 6.25, OutputPricePerM = 25.00 ],
+        [ ModelId = "claude-opus-4.6",   ModelDisplayName = "Claude Opus 4.6",  Provider = "Anthropic", Tier = "Powerful",  InputPricePerM = 5.00, CacheReadPricePerM = 0.50, CacheWritePricePerM = 6.25, OutputPricePerM = 25.00 ],
         [ ModelId = "claude-opus-4-7",   ModelDisplayName = "Claude Opus 4.7",  Provider = "Anthropic", Tier = "Powerful",  InputPricePerM = 5.00, CacheReadPricePerM = 0.50, CacheWritePricePerM = 6.25, OutputPricePerM = 25.00 ],
+        [ ModelId = "claude-opus-4.7",   ModelDisplayName = "Claude Opus 4.7",  Provider = "Anthropic", Tier = "Powerful",  InputPricePerM = 5.00, CacheReadPricePerM = 0.50, CacheWritePricePerM = 6.25, OutputPricePerM = 25.00 ],
 
         // ── Google ────────────────────────────────────────────────────────────
         [ ModelId = "gemini-2.5-pro",   ModelDisplayName = "Gemini 2.5 Pro",   Provider = "Google",   Tier = "Powerful",     InputPricePerM = 1.25, CacheReadPricePerM = 0.125, CacheWritePricePerM = null, OutputPricePerM = 10.00 ],

@@ -162,9 +162,24 @@ let
     ),
 
     // -------------------------------------------------------------------------
+    // Shift UTC timestamps to local time using the TimeZoneOffsetHours parameter.
+    // e.g. -5 = UTC-5 (Eastern Standard), -7 = UTC-7 (Mountain Standard), 1 = CET
+    // Fractional offsets are supported (e.g. 5.5 for India UTC+5:30).
+    // Note: this is a fixed offset and does not auto-adjust for daylight saving time.
+    // -------------------------------------------------------------------------
+    UtcOffset     = #duration(0, 0, Number.Round(TimeZoneOffsetHours * 60), 0),
+    WithLocalTimes = Table.TransformColumns(
+        FinalTable,
+        {
+            {"startTime", each _ + UtcOffset, type datetime},
+            {"endTime",   each _ + UtcOffset, type datetime}
+        }
+    ),
+
+    // -------------------------------------------------------------------------
     // Add StartDate (date only) for relating to the Date table
     // -------------------------------------------------------------------------
-    WithStartDate = Table.AddColumn(FinalTable, "StartDate", each Date.From([startTime]), type date),
+    WithStartDate = Table.AddColumn(WithLocalTimes, "StartDate", each Date.From([startTime]), type date),
 
     // -------------------------------------------------------------------------
     // Set column types
